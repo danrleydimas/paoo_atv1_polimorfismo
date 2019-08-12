@@ -14,16 +14,14 @@ public class Teste {
 		  if(tipo == 1) {
 			  Tipo1 aux = new Tipo1();
 			  aux.setSalario(2500+gerador.nextDouble()*700);
-			  aux.Calcular();
-			  empregados.add(aux);
+			  
 		   
 		  }
 		  else if (tipo == 2) {
 			  Tipo2 aux = new Tipo2();
 			  aux.setSalario(1500+gerador.nextDouble()*500);
 			  aux.setPercentualComissao(gerador.nextDouble());
-			  aux.Calcular();
-			  empregados.add(aux);
+			  
 		  
 		   
 		  }
@@ -32,19 +30,18 @@ public class Teste {
 			  aux.setSalario(1200+gerador.nextDouble()*500);
 			  aux.setPercentualComissao(gerador.nextDouble());
 			  aux.setBonus(500 + gerador.nextDouble()*500);
-			  aux.Calcular();
-			  empregados.add(aux);
+			  
 
 		   
 		  }
 		  else {
 			  Tipo4 aux = new Tipo4();
 			  aux.setBonus(2000 + gerador.nextDouble()*2000);
-			  aux.Calcular();
-			  empregados.add(aux);
+			  
 		  }
 		
-		  
+		  aux.Calcular();
+		  empregados.add(aux);
 		 }
 		 for (Empregado e : empregados){
 			 	System.out.println("Valor a receber: " + e.getValorareceber());
